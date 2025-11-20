@@ -1,13 +1,9 @@
 import { motion } from 'framer-motion';
+import AnimatedPage from '../components/AnimatedPage';
 
-const Hero = () => {
+const Home = () => {
   return (
-    <section className="relative overflow-hidden pt-24 pb-32">
-      {/* background blobs */}
-      <div className="pointer-events-none absolute -top-40 -left-40 w-[420px] h-[420px] rounded-full bg-accent/70 blur-[90px]" />
-      <div className="pointer-events-none absolute -top-64 right-[-120px] w-[520px] h-[520px] rounded-full bg-accent/80 blur-[110px]" />
-      <div className="pointer-events-none absolute bottom-[-120px] right-24 w-[220px] h-[220px] rounded-full bg-accent/80 blur-[70px]" />
-
+    <AnimatedPage>
       <div className="relative max-w-5xl mx-auto">
         {/* name block */}
         <motion.div
@@ -25,7 +21,7 @@ const Hero = () => {
             JERRY
           </h1>
           <div className="mt-1 text-[11px] tracking-[0.35em] uppercase">
-            Designer &amp; Developer
+            Designer & Developer
           </div>
           <h2 className="font-display leading-none text-[56px] sm:text-[72px] md:text-[96px] tracking-tight mt-4 text-primary">
             CHEN
@@ -44,8 +40,8 @@ const Hero = () => {
           Student at The University of Texas at Dallas
         </motion.p>
       </div>
-    </section>
+    </AnimatedPage>
   );
 };
 
-export default Hero;
+export default Home;
