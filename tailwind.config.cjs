@@ -1,21 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
-  ],
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: '#233A36',
-        accent: '#5E45B1',
-        paper: '#F5F1E9',
+        'jerry-bg': '#FAF7F2',      // The Cream Background
+        'jerry-green': '#06272A',   // The "Stroke" / Main Text Color
+        'jerry-blue': '#132B45',    // Navbar Text / Subtitle Color
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'serif'],
-        body: ['system-ui', 'sans-serif'],
-      },
+        serif: ['"Lastik"', 'serif'],
+        sans: ['"Inter"', 'sans-serif'],
+      }
     },
   },
   plugins: [],
-};
+}

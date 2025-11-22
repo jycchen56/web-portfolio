@@ -1,46 +1,57 @@
+// src/pages/Home.tsx
 import { motion } from 'framer-motion';
-import AnimatedPage from '../components/AnimatedPage';
+import circle1 from '../assets/circle1.png';
 
 const Home = () => {
   return (
-    <AnimatedPage>
-      <div className="relative max-w-5xl mx-auto">
-        {/* name block */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: 'easeOut' }}
-          className="mt-20"
-        >
-          <div className="flex justify-between text-xs tracking-[0.2em] uppercase mb-4">
-            <span>20</span>
-            <span>Plano, TX</span>
-          </div>
+    <section className="h-screen w-full flex flex-col justify-center items-center text-jerry-green relative overflow-hidden bg-transparent">
 
-          <h1 className="font-display leading-none text-[56px] sm:text-[72px] md:text-[96px] tracking-tight text-primary">
+      {/* --- CENTER TYPOGRAPHY STACK --- */}
+      <div className="relative flex flex-col items-center">
+
+        {/* Top Row: "20" and "JERRY" */}
+        <div className="relative">
+          {/* The "20" */}
+          <span className="absolute -top-[-3vw] -left-[0.5vw] font-serif text-[1vw]">
+            20
+          </span>
+          <h1 className="font-serif text-[8vw] leading-[0.8] font-light">
             JERRY
           </h1>
-          <div className="mt-1 text-[11px] tracking-[0.35em] uppercase">
-            Designer & Developer
-          </div>
-          <h2 className="font-display leading-none text-[56px] sm:text-[72px] md:text-[96px] tracking-tight mt-4 text-primary">
-            CHEN
-          </h2>
-        </motion.div>
+        </div>
 
-        {/* subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.7 }}
-          className="mt-16 max-w-md text-xs sm:text-sm leading-relaxed"
-        >
-          Aspiring UI designer and Software Engineer
-          <br />
-          Student at The University of Texas at Dallas
-        </motion.p>
+        {/* Middle Row: "DESIGNER & DEVELOPER" */}
+        <div className="text-jerry-blue font-sans font-black text-[1vw] uppercase tracking-[0.4em] -mt-[12vh] -mb-[9vh]" style={{ fontFamily: '"Inter", sans-serif', fontWeight: 800 }}>
+          Designer & Developer
+        </div>
+
+        {/* Bottom Row: "CHEN" and "Plano, TX" */}
+        <div className="relative">
+          <h1 className="font-serif text-[8vw] leading-[0.8] font-light">
+            CHEN
+          </h1>
+          {/* The "Plano, TX" */}
+          <span className="absolute -bottom-[-4.5vw] -right-[1.5vw] font-serif text-[1vw]">
+            Plano, TX
+          </span>
+        </div>
+
       </div>
-    </AnimatedPage>
+
+      {/* --- BOTTOM LEFT FOOTER --- */}
+      <div className="absolute bottom-[6vh] left-[12vw] right-[12vw] flex flex-row justify-between items-center">
+        <div className="flex flex-col items-start">
+          <p className="font-serif text-[clamp(12px,1.1vw,18px)] leading-tight">
+            Aspiring UI designer and Software Engineer
+          </p>
+          <p className="font-serif text-[clamp(12px,1.1vw,18px)] leading-tight -mt-[2vh]">
+            Student at The University of Texas at Dallas
+          </p>
+        </div>
+        <img src={circle1} className="w-[8vw] h-auto" alt="decoration" />
+      </div>
+
+    </section>
   );
 };
 
