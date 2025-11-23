@@ -8,7 +8,7 @@ const Home = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
       className="h-screen w-full flex flex-col justify-center items-center text-jerry-green relative overflow-hidden bg-transparent"
     >
 

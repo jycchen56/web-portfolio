@@ -65,6 +65,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               src={currentBlob.base}
               alt="Decoration"
               className="w-full h-auto min-h-[400px] object-cover object-top"
+              loading="eager"
+              decoding="sync"
             />
          </picture>
       </div>
