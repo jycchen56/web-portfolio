@@ -1,6 +1,6 @@
 // src/components/Layout.tsx
 import { useLocation } from 'react-router-dom';
-import Navbar from './Navbar';
+import Navbar from './Navbar.tsx';
 
 import blob1 from '../assets/blob1.png';
 
