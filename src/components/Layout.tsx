@@ -46,7 +46,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const currentBlob = blobMap[location.pathname] || blobMap['/'];
 
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden">
+    <div className={`relative min-h-screen w-full overflow-x-hidden ${location.pathname === '/' ? 'overflow-y-hidden h-screen' : ''}`}>
 
 
 
