@@ -7,7 +7,6 @@ const Home = () => {
     <motion.section
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0 }}
       transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
       className="h-screen w-full flex flex-col justify-center items-center text-jerry-green relative overflow-hidden bg-transparent"
     >
@@ -27,7 +26,7 @@ const Home = () => {
         </div>
 
         {/* Middle Row: "DESIGNER & DEVELOPER" */}
-        <div className="text-jerry-blue font-sans font-black text-[1vw] uppercase tracking-[0.4em] -mt-[12vh] -mb-[9vh]" style={{ fontFamily: '"Inter", sans-serif', fontWeight: 900 }}>
+        <div className="text-jerry-blue font-black text-[1vw] uppercase tracking-[0.4em] -mt-[9vh] -mb-[9vh]" style={{ fontFamily: '"Inter", sans-serif', fontWeight: 900 }}>
           Designer & Developer
         </div>
 
@@ -37,7 +36,7 @@ const Home = () => {
             CHEN
           </h1>
           {/* The "Plano, TX" */}
-          <span className="absolute -bottom-[-4.5vw] -right-[1.5vw] font-serif text-[1vw]">
+          <span className="absolute -bottom-[-3vw] -right-[1.5vw] font-serif text-[1vw]">
             Plano, TX
           </span>
         </div>

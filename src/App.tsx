@@ -11,7 +11,7 @@ import About from './pages/About';
 import './App.css';
 
 // Assets to preload
-import blob1 from './assets/blob1.png';
+import homeBlob from './assets/homeBlob.png';
 import circle1 from './assets/circle1.png';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     const preloadImages = async () => {
-      const imagePaths = [blob1, circle1];
+      const imagePaths = [homeBlob, circle1];
 
       const loadPromises = imagePaths.map((path) => {
         return new Promise((resolve, reject) => {
@@ -47,7 +47,7 @@ function App() {
   return (
     <>
       <NoiseOverlay />
-      
+
       <Layout>
         {!isLoading && (
           <AnimatePresence mode="wait">

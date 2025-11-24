@@ -2,7 +2,8 @@
 import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 
-import blob1 from '../assets/blob1.png';
+import homeBlob from '../assets/homeBlob.png';
+import projectsBlob from '../assets/projectsBlob.png';
 
 // Define the blob configuration type
 type BlobConfig = {
@@ -16,25 +17,25 @@ type BlobConfig = {
 // TODO: Replace placeholders with actual assets when available
 const blobMap: Record<string, BlobConfig> = {
   '/': {
-    base: blob1,
-    className: "top-[-40vh] left-0", // Default position for Home
+    base: homeBlob,
+    className: "top-[-25vh] left-0", // Default position for Home
   },
   '/projects': {
-    base: blob1,
-    wide: blob1,
-    ultra: blob1,
+    base: projectsBlob,
+    wide: projectsBlob,
+    ultra: projectsBlob,
     className: "top-0 right-0", // Example position for Projects
   },
   '/creative': {
-    base: blob1,
-    wide: blob1,
-    ultra: blob1,
+    base: homeBlob,
+    wide: homeBlob,
+    ultra: homeBlob,
     className: "top-[-20vh] left-[-10vw]", // Example position for Creative
   },
   '/about': {
-    base: blob1,
-    wide: blob1,
-    ultra: blob1,
+    base: homeBlob,
+    wide: homeBlob,
+    ultra: homeBlob,
     className: "bottom-0 right-[-5vw]", // Example position for About
   },
 };
