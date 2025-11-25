@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import ProjectCard from '../components/ProjectCard';
-import dummyrect from '../assets/dummyrect.png';
+import enkyhero from '../assets/enkyhero.png';
+import connectedhero from '../assets/connectedhero.png';
+import cylchero from '../assets/cylchero.png';
 
 const Projects = () => {
   // Animation Variants
@@ -53,7 +55,7 @@ const Projects = () => {
     >
       {/* Text Group */}
       <motion.div variants={textVariants} className="w-full flex flex-col items-end">
-        <h1 className="font-serif text-[5vw] text-jerry-green pr-[6vw] mt-[7vh] -mb-[.75vh]">
+        <h1 className="font-serif text-[5vw] min-[1480px]:text-[4vw] text-jerry-green pr-[6vw] mt-[12vh] min-[1480px]:mt-[7vh] -mb-[.75vh]">
           Projects
         </h1>
         <p className="text-jerry-green pr-[6vw]"
@@ -66,35 +68,36 @@ const Projects = () => {
       <div className="w-full">
         <motion.div
           variants={gridVariants}
-          className="grid grid-cols-3 gap-[3vw] items-center mx-[6vw] mt-[-6vh]"
+          className="grid grid-cols-3 gap-[3vw] mx-[6vw] mt-[-6vh]"
         >
           {/* Dummy Data for Projects */}
           {[
             {
-              title: "Portfolio V1",
-              description: "My first portfolio website built with simple HTML and CSS. It features a clean layout and basic responsiveness.",
-              tags: ["HTML", "CSS", "JavaScript"],
-              image: dummyrect,
+              title: "Connected Care",
+              description: "A full-stack scheduling platform built with Vue and Nuxt.js. Replaced Excel workflows with automated intake forms and secure role-based authentication.",
+              tags: ["Vue.js", "Nuxt.js", "SQLite", "Prisma"],
+              image: connectedhero,
             },
             {
-              title: "E-Commerce App",
-              description: "A full-stack e-commerce application with user authentication, product catalog, and shopping cart functionality.",
-              tags: ["React", "Node.js", "MongoDB", "Tailwind"],
-              image: dummyrect,
+              title: "CYLC",
+              description: "A modern website designed in Figma and built with React and Chakra UI. Replaced a WordPress backend to revitalize user engagement and improve scalability.",
+              tags: ["React", "CloudFlare", "Chakra UI", "JavaScript"],
+              image: cylchero,
             },
             {
-              title: "Task Manager",
-              description: "A productivity tool to help users organize their daily tasks. Includes drag-and-drop functionality and progress tracking.",
-              tags: ["Vue.js", "Firebase", "Sass"],
-              image: dummyrect,
+              title: "Enky",
+              description: "Engineered a responsive front-end using TypeScript and Tailwind CSS. Led the UI design process to create a sleek, user-centered interface that enhanced user engagement.",
+              tags: ["TypeScript", "Tailwind CSS", "Vite", "React"],
+              image: enkyhero,
             }
           ].map((project, index) => (
             <motion.div
               key={index}
               variants={cardVariants}
               className={`
-                ${index === 0 ? '-translate-y-[8vh]' : ''}
-                ${index === 2 ? 'translate-y-[8vh]' : ''}
+                h-full
+                ${index === 0 ? '-translate-y-[8vh] min-[1480px]:-translate-y-[6vh]' : ''}
+                ${index === 2 ? 'translate-y-[8vh] min-[1480px]:translate-y-[6vh]' : ''}
               `}
             >
               <ProjectCard
@@ -109,12 +112,12 @@ const Projects = () => {
       </div>
 
       {/* Links Group */}
-      <motion.div variants={textVariants} className="w-full mt-[-4vh] pl-[6vw] flex flex-col items-start space-y-[0.5vh]">
+      <motion.div variants={textVariants} className="w-full pl-[6vw] flex flex-col items-start space-y-[0.5vh]">
         {['GitHub', 'LinkedIn', 'Resume'].map((item) => (
           <a
             key={item}
             href={`/${item.toLowerCase()}`}
-            className="font-serif text-[1.5vw] text-jerry-green hover:opacity-60 transition-opacity"
+            className="font-serif text-[1.5vw] min-[1480px]:text-[1vw] text-jerry-blue hover:opacity-60 transition-opacity"
           >
             {item}
           </a>
