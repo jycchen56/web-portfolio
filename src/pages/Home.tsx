@@ -11,45 +11,65 @@ const Home = () => {
       className="h-screen w-full flex flex-col justify-center items-center text-jerry-green relative overflow-hidden bg-transparent"
     >
 
-      {/* --- CENTER TYPOGRAPHY STACK --- */}
-      <div className="relative flex flex-col items-center">
+      {/* --- ANCHOR CENTER --- */}
+      <div className="relative flex justify-center items-center w-0 h-0">
 
-        {/* Top Row: "20" and "JERRY" */}
-        <div className="relative">
-          {/* The "20" */}
-          <span className="absolute -top-[-4vw] -left-[0.5vw] font-serif text-[1vw]">
-            20
-          </span>
-          <h1 className="font-serif text-[8vw] font-light">
-            JERRY
-          </h1>
+        {/* --- CENTER TEXT (Fixed Anchor) --- */}
+        <div
+          className="absolute z-20 flex justify-center items-center w-[100vw]"
+        >
+           <span
+             className="text-jerry-blue font-black text-[1vw] uppercase tracking-[0.5em] bg-transparent"
+             style={{ fontFamily: '"Inter", sans-serif', fontWeight: 900 }}
+           >
+             Designer & Developer
+           </span>
         </div>
 
-        {/* Middle Row: "DESIGNER & DEVELOPER" */}
-        <div className="text-jerry-blue font-black text-[1vw] uppercase tracking-[0.5em] -mt-[7vw] -mb-[5vw]" style={{ fontFamily: '"Inter", sans-serif', fontWeight: 900 }}>
-          Designer & Developer
+        {/* --- TOP ROW: JERRY --- */}
+        {/* BASE (Laptop < 1480px): mb-[4vw]
+            DESKTOP ( > 1480px):    min-[1480px]:mb-[3.5vw]
+
+            ADJUSTMENT GUIDE:
+            1. Laptop: Tweak 'mb-[4vw]' until it looks right on the laptop.
+            2. Desktop: Tweak 'min-[1480px]:mb-[3.5vw]' until it looks right on the desktop.
+               (Use a smaller number to pull Jerry down/reduce gap).
+        */}
+        <div className="absolute bottom-0 w-[100vw] text-center z-10 mb-[10vw] min-[1480px]:mb-[7vw]">
+           <div className="relative inline-block">
+             <p className="absolute top-[6vw] min-[1480px]:top-[5vw] -left-[0.5vw] font-serif text-[1vw]">
+               20
+             </p>
+             <p className="font-serif text-[8vw] font-light leading-none">
+               JERRY
+             </p>
+           </div>
         </div>
 
-        {/* Bottom Row: "CHEN" and "Plano, TX" */}
-        <div className="relative">
-          <h1 className="font-serif text-[8vw] font-light">
-            CHEN
-          </h1>
-          {/* The "Plano, TX" */}
-          <span className="absolute -bottom-[-5.5vw] -right-[1.5vw] font-serif text-[1vw]">
-            Plano, TX
-          </span>
+        {/* --- BOTTOM ROW: CHEN --- */}
+        {/* If the bottom gap is also weird, you can do the same thing:
+            mt-[4.2vw] min-[1480px]:mt-[4.0vw]
+        */}
+        <div className="absolute top-0 w-[100vw] text-center z-10 mt-[10vw]">
+           <div className="relative inline-block">
+             <p className="font-serif text-[8vw] font-light leading-none">
+               CHEN
+             </p>
+             <p className="absolute bottom-[6vw] -right-[2.5vw] font-serif text-[1vw]">
+               Plano, TX
+             </p>
+           </div>
         </div>
 
       </div>
 
-      {/* --- BOTTOM LEFT FOOTER --- */}
-      <div className="absolute bottom-[2vh] left-[24vw] right-[22vw] flex flex-row justify-between items-center">
+      {/* --- FOOTER --- */}
+      <div className="absolute bottom-[5%] left-[24%] right-[22%] flex flex-row justify-between items-center">
         <div className="flex flex-col items-start">
-          <p className="font-serif text-[clamp(12px,1.1vw,18px)] leading-tight">
+          <p className="font-serif text-[clamp(10px,1.2vw,18px)] leading-tight">
             Aspiring UI designer and Software Engineer
           </p>
-          <p className="font-serif text-[clamp(12px,1.1vw,18px)] leading-tight -mt-[2vh]">
+          <p className="font-serif text-[clamp(10px,1.2vw,18px)] leading-tight -mt-[0.5vw]">
             Student at The University of Texas at Dallas
           </p>
         </div>

@@ -18,7 +18,7 @@ type BlobConfig = {
 const blobMap: Record<string, BlobConfig> = {
   '/': {
     base: homeBlob,
-    className: "top-[-25vh] left-0", // Default position for Home
+    className: "top-[-20vh] min-[1480px]:top-[-30vh] left-0", // Default position for Home
   },
   '/projects': {
     base: projectsBlob,
