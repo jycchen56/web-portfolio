@@ -17,26 +17,26 @@ const Home = () => {
         {/* Top Row: "20" and "JERRY" */}
         <div className="relative">
           {/* The "20" */}
-          <span className="absolute -top-[-3vw] -left-[0.5vw] font-serif text-[1vw]">
+          <span className="absolute -top-[-4vw] -left-[0.5vw] font-serif text-[1vw]">
             20
           </span>
-          <h1 className="font-serif text-[8vw] leading-[0.8] font-light">
+          <h1 className="font-serif text-[8vw] font-light">
             JERRY
           </h1>
         </div>
 
         {/* Middle Row: "DESIGNER & DEVELOPER" */}
-        <div className="text-jerry-blue font-black text-[1vw] uppercase tracking-[0.4em] -mt-[9vh] -mb-[9vh]" style={{ fontFamily: '"Inter", sans-serif', fontWeight: 900 }}>
+        <div className="text-jerry-blue font-black text-[1vw] uppercase tracking-[0.5em] -mt-[14vh] -mb-[10vh]" style={{ fontFamily: '"Inter", sans-serif', fontWeight: 900 }}>
           Designer & Developer
         </div>
 
         {/* Bottom Row: "CHEN" and "Plano, TX" */}
         <div className="relative">
-          <h1 className="font-serif text-[8vw] leading-[0.8] font-light">
+          <h1 className="font-serif text-[8vw] font-light">
             CHEN
           </h1>
           {/* The "Plano, TX" */}
-          <span className="absolute -bottom-[-3vw] -right-[1.5vw] font-serif text-[1vw]">
+          <span className="absolute -bottom-[-5.5vw] -right-[1.5vw] font-serif text-[1vw]">
             Plano, TX
           </span>
         </div>
