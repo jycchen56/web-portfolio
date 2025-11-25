@@ -114,7 +114,7 @@ const Projects = () => {
           <a
             key={item}
             href={`/${item.toLowerCase()}`}
-            className="font-serif text-[1.5vw] text-jerry-green"
+            className="font-serif text-[1.5vw] text-jerry-green hover:opacity-60 transition-opacity"
           >
             {item}
           </a>
