@@ -32,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, image, ta
 
       <a
         href={link || '#'}
-        className="text-jerry-green font-serif text-xl flex items-center my-[4vh] w-fit ml-auto"
+        className="text-jerry-green font-serif text-xl flex items-center my-[4vh] w-fit ml-auto  hover:opacity-60 transition-opacity"
       >
         Learn More <ChevronRight className="w-5 h-5" />
       </a>
