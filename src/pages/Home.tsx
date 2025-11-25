@@ -26,7 +26,7 @@ const Home = () => {
         </div>
 
         {/* Middle Row: "DESIGNER & DEVELOPER" */}
-        <div className="text-jerry-blue font-black text-[1vw] uppercase tracking-[0.5em] -mt-[14vh] -mb-[10vh]" style={{ fontFamily: '"Inter", sans-serif', fontWeight: 900 }}>
+        <div className="text-jerry-blue font-black text-[1vw] uppercase tracking-[0.5em] -mt-[7vw] -mb-[5vw]" style={{ fontFamily: '"Inter", sans-serif', fontWeight: 900 }}>
           Designer & Developer
         </div>
 

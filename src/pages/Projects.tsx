@@ -53,7 +53,7 @@ const Projects = () => {
     >
       {/* Text Group */}
       <motion.div variants={textVariants} className="w-full flex flex-col items-end">
-        <h1 className="font-serif text-[5vw] text-jerry-green pr-[6vw] mt-[6vh] -mb-[.75vh]">
+        <h1 className="font-serif text-[5vw] text-jerry-green pr-[6vw] mt-[7vh] -mb-[.75vh]">
           Projects
         </h1>
         <p className="text-jerry-green pr-[6vw]"
