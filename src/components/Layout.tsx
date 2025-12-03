@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 
 import homeBlob from '../assets/homeBlob.png';
 import projectsBlob from '../assets/projectsBlob.png';
+import aboutBlob from '../assets/aboutBlob.png';
 
 // Define the blob configuration type
 type BlobConfig = {
@@ -19,22 +20,22 @@ type BlobConfig = {
 const blobMap: Record<string, BlobConfig> = {
   '/': {
     base: homeBlob,
-    className: "top-[-20vh] min-[1480px]:top-[-30vh] left-0", // Default position for Home
+    className: "w-full top-[-20vh] min-[1480px]:top-[-30vh] left-0", // Default position for Home
   },
   '/projects': {
     base: projectsBlob,
     wide: projectsBlob,
     ultra: projectsBlob,
-    className: "top-0 right-0", // Example position for Projects
+    className: "w-full top-0 right-0", // Example position for Projects
   },
   '/creative': {
     customBackground: "linear-gradient(180deg, #E1C8F1 0%, #5E45B1 100%)",
   },
   '/about': {
-    base: homeBlob,
-    wide: homeBlob,
-    ultra: homeBlob,
-    className: "bottom-0 right-[-5vw]", // Example position for About
+    base: aboutBlob,
+    wide: aboutBlob,
+    ultra: aboutBlob,
+    className: "w-[70vw] bottom-0 right-[0vw]",
   },
 };
 
@@ -61,7 +62,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       {/* LAYER 1: The Blob (Only if NO custom background) */}
       {!currentBlob.customBackground && (
-        <div className={`fixed w-full z-0 pointer-events-none ${currentBlob.className || 'top-[-40vh] left-0'}`}>
+        <div className={`fixed z-0 pointer-events-none ${currentBlob.className || 'w-full top-[-40vh] left-0'}`}>
            <picture>
               {/* Ultrawide (>1920px) */}
               {currentBlob.ultra && <source media="(min-width: 1921px)" srcSet={currentBlob.ultra} />}
