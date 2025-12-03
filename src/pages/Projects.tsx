@@ -113,13 +113,19 @@ const Projects = () => {
 
       {/* Links Group */}
       <motion.div variants={textVariants} className="w-full pl-[6vw] flex flex-col items-start space-y-[0.5vh]">
-        {['GitHub', 'LinkedIn', 'Resume'].map((item) => (
+        {[
+          { label: 'GitHub', href: 'https://github.com/jycchen56' },
+          { label: 'LinkedIn', href: 'https://linkedin.com/in/jerry-chen-2b4143238' },
+          { label: 'Resume', href: '/resume.pdf' }
+        ].map((item) => (
           <a
-            key={item}
-            href={`/${item.toLowerCase()}`}
+            key={item.label}
+            href={item.href}
+            target={item.href.startsWith('http') ? "_blank" : undefined}
+            rel={item.href.startsWith('http') ? "noopener noreferrer" : undefined}
             className="font-serif text-[1.5vw] min-[1480px]:text-[1vw] text-jerry-blue hover:opacity-60 transition-opacity"
           >
-            {item}
+            {item.label}
           </a>
         ))}
       </motion.div>
