@@ -18,13 +18,13 @@ const Creative = () => {
           <img
             src={yellowCircle}
             alt="Yellow Circle"
-            className="absolute top-[18vh] w-[40vw] -z-10"
+            className="absolute top-[18vh] min-[1480px]:top-[5vh] w-[40vw] -z-10"
           />
-          <div className="flex flex-col w-[55vw] ml-[-25vw] pl-[27vw] pr-[2vw]">
-            <h1 className="text-[3vw] font-display text-jerry-green leading-[8vh] ml-[28vw] mt-[-2vh]">
+          <div className="flex flex-col w-[55vw] ml-[-25vw] pl-[27vw] pr-[2vw] min-[1480px]:w-[44vw] min-[1480px]:ml-[-5vw] min-[1480px]:pl-[22vw] min-[1480px]:pr-[0vw]">
+            <h1 className="text-[3vw] font-display text-jerry-green leading-[8vh] ml-[28vw] mt-[-2vh] min-[1480px]:text-[2.4vw] min-[1480px]:ml-[22.4vw]">
               The Pursuit of Visual<br />Identity
             </h1>
-            <p className="text-[2vw] text-right leading-[4vh] mt-[-10vh]" style={{ fontFamily: '"Inter", sans-serif', fontWeight: 300, color: '#FAF7F2' }}>
+            <p className="text-[2vw] text-right leading-[4vh] mt-[-10vh] min-[1480px]:text-[1.6vw]" style={{ fontFamily: '"Inter", sans-serif', fontWeight: 300, color: '#FAF7F2' }}>
               A collection<br />
               of my life's<br />
               photography, as I<br />

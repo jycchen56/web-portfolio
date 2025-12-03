@@ -3,7 +3,7 @@ import galleryImage5 from '../assets/galleryImage5.jpg';
 
 const VerticalGallery = () => {
   return (
-    <div className="border-2 border-jerry-green rounded-[40px] py-[5vh] px-[2vw] bg-[#FAF7F2] flex flex-col gap-[2vw] w-[20vw] h-fit mt-[12vh]">
+    <div className="border-2 border-jerry-green rounded-[40px] py-[5vh] px-[2vw] bg-[#FAF7F2] flex flex-col gap-[2vw] w-[20vw] h-fit mt-[12vh] min-[1480px]:w-[16vw] min-[1480px]:py-[4vh] min-[1480px]:px-[1.6vw] min-[1480px]:gap-[1.6vw]">
 
       {/* Top: Horizontal Image (4x3) */}
       <div className="w-full aspect-[4/3] bg-gray-200 rounded-[25px] relative overflow-hidden group">
