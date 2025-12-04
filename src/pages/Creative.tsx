@@ -5,22 +5,54 @@ import yellowCircle from '../assets/yellowCircle.png';
 import redCircle from '../assets/redCircle.png';
 
 const Creative = () => {
+  // Animation Variants
+  const horizontalGalleryVariant = {
+    hidden: { x: -100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeOut" as const, delay: 0.2 }
+    }
+  };
+
+  const verticalGalleryVariant = {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeOut" as const, delay: 1.0 }
+    }
+  };
+
+  const textVariant = {
+    hidden: { x: 50, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeOut" as const, delay: 1.8 }
+    }
+  };
+
   return (
     <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+      initial="hidden"
+      animate="visible"
       className="h-screen w-full flex flex-row justify-start items-center text-jerry-green relative overflow-hidden bg-transparent"
     >
       <div className="flex flex-row items-start gap-[8vw]">
         <div className="flex flex-col gap-[4vh] relative">
-          <HorizontalGallery />
+          <motion.div variants={horizontalGalleryVariant}>
+            <HorizontalGallery />
+          </motion.div>
           <img
             src={yellowCircle}
             alt="Yellow Circle"
-            className="absolute top-[18vh] min-[1480px]:top-[5vh] w-[40vw] -z-10"
+            className="absolute top-[18vh] min-[1480px]:top-[8vh] w-[40vw] -z-10"
           />
-          <div className="flex flex-col w-[55vw] ml-[-25vw] pl-[27vw] pr-[2vw] min-[1480px]:w-[44vw] min-[1480px]:ml-[-5vw] min-[1480px]:pl-[22vw] min-[1480px]:pr-[0vw]">
+          <motion.div
+            variants={textVariant}
+            className="flex flex-col w-[55vw] ml-[-25vw] pl-[27vw] pr-[2vw] min-[1480px]:w-[44vw] min-[1480px]:ml-[-5vw] min-[1480px]:pl-[22vw] min-[1480px]:pr-[0vw]"
+          >
             <h1 className="text-[3vw] font-display text-jerry-green leading-[8vh] ml-[28vw] mt-[-2vh] min-[1480px]:text-[2.4vw] min-[1480px]:ml-[22.4vw]">
               The Pursuit of Visual<br />Identity
             </h1>
@@ -31,9 +63,11 @@ const Creative = () => {
               search for my<br />
               identity as an artist.
             </p>
-          </div>
+          </motion.div>
         </div>
-        <VerticalGallery />
+        <motion.div variants={verticalGalleryVariant}>
+          <VerticalGallery />
+        </motion.div>
       </div>
 
       {/* Red Circle - Bottom Right */}
