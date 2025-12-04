@@ -1,9 +1,18 @@
-import galleryImage1 from '../assets/galleryImage1.jpg';
-import galleryImage2 from '../assets/galleryImage2.jpg';
-import galleryImage3 from '../assets/galleryImage3.jpg';
-import galleryImage6 from '../assets/galleryImage6.jpg';
+import galleryImage1Srcset from '../assets/galleryImage1.jpg?w=640;1024;1920&format=webp&as=srcset';
+import galleryImage1Fallback from '../assets/galleryImage1.jpg?w=1920&format=jpg';
+import galleryImage2Srcset from '../assets/galleryImage2.jpg?w=640;1024;1920&format=webp&as=srcset';
+import galleryImage2Fallback from '../assets/galleryImage2.jpg?w=1920&format=jpg';
+import galleryImage3Srcset from '../assets/galleryImage3.jpg?w=640;1024;1920&format=webp&as=srcset';
+import galleryImage3Fallback from '../assets/galleryImage3.jpg?w=1920&format=jpg';
+import galleryImage6Srcset from '../assets/galleryImage6.jpg?w=640;1024;1920&format=webp&as=srcset';
+import galleryImage6Fallback from '../assets/galleryImage6.jpg?w=1920&format=jpg';
 
-const images = [galleryImage1, galleryImage2, galleryImage3, galleryImage6];
+const images = [
+  { srcset: galleryImage1Srcset, src: galleryImage1Fallback },
+  { srcset: galleryImage2Srcset, src: galleryImage2Fallback },
+  { srcset: galleryImage3Srcset, src: galleryImage3Fallback },
+  { srcset: galleryImage6Srcset, src: galleryImage6Fallback },
+];
 
 const HorizontalGallery = () => {
   return (
@@ -13,7 +22,14 @@ const HorizontalGallery = () => {
           key={index}
           className={`flex-1 aspect-[3/4] bg-gray-200 rounded-[25px] relative overflow-hidden group min-[1480px]:flex-none min-[1480px]:h-full ${index >= 3 ? 'hidden min-[1480px]:block' : ''}`}
         >
-           <img src={image} alt={`Gallery ${index + 1}`} className="w-full h-full object-cover" />
+           <img 
+             src={image.src} 
+             srcSet={image.srcset}
+             sizes="(min-width: 1480px) 20vw, 30vw"
+             alt={`Gallery ${index + 1}`} 
+             className="w-full h-full object-cover" 
+             loading="lazy"
+           />
         </div>
       ))}
     </div>
