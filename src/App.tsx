@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import Layout from './components/Layout';
 import NoiseOverlay from './components/NoiseOverlay';
 import LoadingScreen from './components/LoadingScreen';
+import MobileWarning from './components/MobileWarning';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Creative from './pages/Creative';
@@ -21,6 +22,17 @@ import redCircle from './assets/redCircle.png';
 function App() {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const preloadImages = async () => {
@@ -47,6 +59,10 @@ function App() {
 
     preloadImages();
   }, []);
+
+  if (isMobile) {
+    return <MobileWarning />;
+  }
 
   return (
     <>
