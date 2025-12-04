@@ -13,6 +13,10 @@ import './App.css';
 // Assets to preload
 import homeBlob from './assets/homeBlob.png';
 import circle1 from './assets/circle1.png';
+import projectsBlob from './assets/projectsBlob.png';
+import aboutBlob from './assets/aboutBlob.png';
+import yellowCircle from './assets/yellowCircle.png';
+import redCircle from './assets/redCircle.png';
 
 function App() {
   const location = useLocation();
@@ -20,7 +24,7 @@ function App() {
 
   useEffect(() => {
     const preloadImages = async () => {
-      const imagePaths = [homeBlob, circle1];
+      const imagePaths = [homeBlob, circle1, projectsBlob, aboutBlob, yellowCircle, redCircle];
 
       const loadPromises = imagePaths.map((path) => {
         return new Promise((resolve, reject) => {
