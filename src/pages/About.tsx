@@ -13,7 +13,7 @@ const About = () => {
       {/* Left Column: Text Content */}
       <div className="flex flex-col w-1/2 text-jerry-green mx-[10vw] my-[10vh]">
         <h1 className="text-[3vw] font-display leading-tight min-[1480px]:text-[2.4vw]">
-          Building meaningful, beautiful and well developed projects.
+          Building meaningful, beautiful, and well developed projects.
         </h1>
 
         <p className="text-[1.2vw] leading-tight min-[1480px]:text-[0.9vw]" style={{ fontFamily: '"Inter", sans-serif' }}>
